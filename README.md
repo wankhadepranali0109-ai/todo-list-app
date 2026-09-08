@@ -11,6 +11,10 @@ A simple browser-based To-Do application built with HTML, CSS, and JavaScript.
 ## Run locally
 Open `index.html` in a web browser.
 
+## Run with Docker
+Build the image:
+docker build -t todo-list-app:latest .
+
 ## Technologies
 - HTML
 - CSS
