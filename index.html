@@ -3,10 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My To-Do List</title>
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My To-Do List</h1>
-  <p>My learning tasks will appear here.</p>
+  <main class="app">
+    <header class="hero">
+      <h1>To-Do App</h1>
+    </header>
+
+    <section class="content">
+      <nav class="tabs" aria-label="Task filters">
+        <button class="tab active" data-filter="today">Today</button>
+        <button class="tab" data-filter="pending">Pending</button>
+        <button class="tab" data-filter="overdue">Overdue</button>
+      </nav>
+
+      <div class="heading-row">
+        <h2>Tasks</h2>
+        <button id="addButton" class="add-button">+ Add Task</button>
+      </div>
+
+      <div id="addPanel" class="add-panel">
+        <input id="taskName" placeholder="Task name">
+        <input id="taskDue" type="date">
+        <select id="taskPriority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="saveTask" class="add-button">Save</button>
+      </div>
+
+      <div id="taskList" class="task-list"></div>
+
+      <button id="completedToggle" class="completed-heading">Completed ▴</button>
+      <div id="completedList" class="task-list hidden"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
